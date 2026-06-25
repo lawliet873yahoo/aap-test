@@ -1,0 +1,6 @@
+- name: AAP Test Sample
+  hosts: all
+  tasks:
+    - name: hostname Command
+      shell:
+        cmd: hostname
