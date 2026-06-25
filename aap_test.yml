@@ -3,5 +3,8 @@
   tasks:
     - name: hostname Command
       ansible.builtin.command: hostname
-    - name: whoami Command
-      ansible.builtin.command: whoami
+      register: hostname_result
+
+    - name: Show hostname_result
+      ansible.builtin.debug: 
+        msg: hostname_result.stdout
