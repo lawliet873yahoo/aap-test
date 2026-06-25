@@ -2,5 +2,6 @@
   hosts: all
   tasks:
     - name: hostname Command
-      shell:
-        cmd: hostname
+      ansible.builtin.command: hostname
+    - name: whoami Command
+      ansible.builtin.command: whoami
